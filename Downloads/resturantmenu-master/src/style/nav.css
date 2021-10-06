@@ -1,0 +1,124 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+
+}
+
+.empty{
+    height: 55px;
+}
+
+nav{
+    font-family: fantasy;
+    background-color:rgb(216, 210, 131);
+    height:55px;
+    width:100%;
+    position:fixed;
+    display:flex;
+    flex-direction:row;
+
+    
+    
+}
+.titlebar{
+    display:flex;
+    flex:1;
+}
+
+label{
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+    padding: 0 50px;
+    display:flex;
+    flex-direction:row;
+    flex:1;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height:55px;
+    margin-right: 40px;
+    cursor: pointer;
+    display:none;
+}
+
+.buttonsitem.active,.buttonsitem:hover{
+    color:white;
+    transition:.5s;
+    cursor: pointer;
+}
+#check{
+    display:none;
+}
+.buttonsitem{
+    padding:10px;
+    margin:0 10px;
+    height:55px;
+    background-color:rgb(216, 210, 131);
+    border:none;
+    font-size:17px;
+    font-family: fantasy;
+    font-weight: bold;
+
+    
+}
+@media(max-width:800px){
+    .navbtn{
+        position:fixed;
+        display:flex;
+        flex-direction:column;
+        opacity:.8;
+        width:100%;
+        top:-100%;
+
+        
+        text-align: center;
+        transition: all .5s;
+        
+        
+    }
+    nav{
+        display:flex;
+        flex-direction:column;
+        
+    }
+    .buttonsitem{
+        margin:-7px;
+        
+    }
+    .checkbtn{
+        display:flex;
+        padding-top: 10px;  
+        position: fixed;
+        top:0;
+        right:0;      
+    }
+    #check{
+        position: fixed;
+        top:0;
+        right:0; 
+        display:none; 
+
+    }
+    #check:checked~.navbtn{
+        top:55px;
+
+    }
+   
+    .logo{
+        display:flex;
+        flex:1;
+    }
+    
+
+    
+}
+
+
